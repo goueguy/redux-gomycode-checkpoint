@@ -1,11 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
-import Form from './components/Form';
+import AddTask from './components/AddTask';
+import ListTask from './components/ListTask';
 
 function App() {
   return (
     <div className="App">
-      <Form/>
+      <AddTask/>
+      <ListTask/>
     </div>
   );
 }

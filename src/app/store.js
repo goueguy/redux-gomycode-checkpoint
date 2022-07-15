@@ -1,11 +1,8 @@
-import { applyMiddleware, configureStore } from "@reduxjs/toolkit";
-import thunk from "redux-thunk";
-import counterReducer from "../features/counter/counterSlice";
-const middlewares = [
-    thunk
-]
+import {configureStore } from "@reduxjs/toolkit";
+import  taskReducer from '../features/tasks/taskSlice';
+
 export const store = configureStore({
     reducer:{
-        counter:counterReducer
+        tasks: taskReducer
     }
-},applyMiddleware(middlewares))
+})
