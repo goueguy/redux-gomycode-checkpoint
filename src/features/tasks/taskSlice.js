@@ -22,9 +22,9 @@ const initialState = {
 export const taskSlice = createSlice({
     name:"tasks",
     initialState,
-    reducer:{
+    reducers:{
         addToTask:(state,action)=>{
-            state.tasks = [...state]
+            state.tasks = [...state.tasks,action.payload]
         }
     }
 })
