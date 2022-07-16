@@ -37,13 +37,13 @@ const AddTask = () => {
                 <div className="col-lg-3 d-flex">
                     <span>STATUT:&nbsp;&nbsp;</span>
                     <div className="form-check">
-                        <input className="form-check-input" value="oui" checked={done==="oui"} onChange={(e)=>radioInputChange(e)} name="statut" type="radio"/>
+                        <input className="form-check-input" value="oui" checked={done==="oui"} onChange={(e)=>radioInputChange(e)} name="status" type="radio"/>
                         <label className="form-check-label" htmlFor="flexCheckIndeterminate">
                         OUI&nbsp;&nbsp;
                         </label>
                     </div>
                     <div className="form-check">
-                        <input className="form-check-input" value="non" checked={done==="non"} onChange={(e)=>radioInputChange(e)} name="statut" type="radio"/>
+                        <input className="form-check-input" value="non" checked={done==="non"} onChange={(e)=>radioInputChange(e)} name="status" type="radio"/>
                         <label className="form-check-label" htmlFor="flexCheckIndeterminate">
                         &nbsp;NON
                         </label>

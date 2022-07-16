@@ -16,6 +16,12 @@ const Filter = (props) => {
             <h4>Filter By: &nbsp;</h4>
             <div className="col-lg-3">
                 <div className="form-check">
+                    <input className="form-check-input" checked={filterStatus==="tout"} onChange={handleRadioChange} value="tout" name="statut" type="radio"/>
+                    <label className="form-check-label" htmlFor="flexCheckIndeterminate">
+                    TOUT&nbsp;&nbsp;
+                    </label>
+                </div>
+                <div className="form-check">
                     <input className="form-check-input" checked={filterStatus==="oui"} onChange={handleRadioChange} value="oui" name="statut" type="radio"/>
                     <label className="form-check-label" htmlFor="flexCheckIndeterminate">
                     OUI&nbsp;&nbsp;

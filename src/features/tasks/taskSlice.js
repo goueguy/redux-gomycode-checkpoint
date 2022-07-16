@@ -18,7 +18,7 @@ const initialState = {
             isDone:"non"
         }
     ],
-    filterStatus:"oui"
+    filterStatus:"tout"
 }
 export const taskSlice = createSlice({
     name:"tasks",

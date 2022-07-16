@@ -5,11 +5,10 @@ import Task from './Task';
 const ListTask = () => {
     const tasks = useSelector(state=>state.tasks.tasks);
     const filterStatus = useSelector(state=>state.tasks.filterStatus);
-    console.log(typeof filterStatus,tasks);
-
+    
     const todoListFiltered = tasks.filter(item=>{
-        if(filterStatus==="oui"){
-            return item.isDone=="oui";
+        if(filterStatus==="tout"){
+            return true;
         }else{
             return item.isDone === filterStatus;
         }
