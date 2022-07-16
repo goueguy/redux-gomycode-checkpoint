@@ -4,6 +4,16 @@ import Task from './Task';
 
 const ListTask = () => {
     const tasks = useSelector(state=>state.tasks.tasks);
+    const filterStatus = useSelector(state=>state.tasks.filterStatus);
+    console.log(typeof filterStatus,tasks);
+
+    const todoListFiltered = tasks.filter(item=>{
+        if(filterStatus==="oui"){
+            return item.isDone=="oui";
+        }else{
+            return item.isDone === filterStatus;
+        }
+    })
     return (
         <div className='col-lg-6 offset-lg-3 mt-4'>
             <table className='table table-bordered'>
@@ -17,9 +27,10 @@ const ListTask = () => {
                 </thead>
                 <tbody>
                     {
-                        tasks.map((task,index)=>(
-                            <Task key={index} task={task}/>
-                        ))
+                    todoListFiltered.length>0 &&
+                    todoListFiltered.map((task,index)=>(
+                            <Task key={task.id} task={task}/>
+                        )).sort().reverse()
                     }
                 </tbody>
             </table>
